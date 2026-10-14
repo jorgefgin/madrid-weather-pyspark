@@ -45,7 +45,7 @@ Analysis of the daily temperature records identifies extreme summer heatwaves ($
 * **All-Time Maximum Temperature:** **41.5 °C** recorded on `2021-08-13` (with a daily thermal amplitude of **20.3 °C**), followed closely by **41.3 °C** on `2022-07-14` and **40.7 °C** on `2025-08-16`.
 * **Tropical Nights:** During the top 10 hottest days on record, minimum temperatures ($T_{\min}$) consistently remained above **20.8 °C**, peaking at **24.6 °C** on `2025-06-29`.
 
-#### Top 5 Hottest Days Recorded (Gold Layer Output)
+#### Top 5 Hottest Days Recorded 
 | Date | Min Temp (°C) | Max Temp (°C) | Thermal Range (°C) | Season |
 | :--- | :---: | :---: | :---: | :---: |
 | **2021-08-13** | 21.2 | **41.5** | 20.3 | Summer |
@@ -71,9 +71,9 @@ Distributed regression pipeline designed to forecast next-hour temperature ($t$)
 ### Test Set Evaluation Metrics
 | Metric | Value |
 | :--- | :--- |
-| **MAE (Mean Absolute Error)** | **0.52 °C** |
-| **RMSE (Root Mean Squared Error)** | **0.75 °C** |
-| **$R^2$ (Coefficient of Determination)** | **0.994** |
+| **MAE (Mean Absolute Error)** | **0.56 °C** |
+| **RMSE (Root Mean Squared Error)** | **0.77 °C** |
+| **$R^2$ (Coefficient of Determination)** | **0.993** |
 
 ![PySpark MLlib Predictions](docs/img/mllib_predictions.png)
 
