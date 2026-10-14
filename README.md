@@ -107,16 +107,7 @@ madrid-weather-pyspark/
 
 ## How to Run the Project
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/jorgefgin/madrid-weather-pyspark.git](https://github.com/jorgefgin/madrid-weather-pyspark.git)
-   cd madrid-weather-pyspark
-   ```
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Run the unit test suite:**
-   ```bash
-   pytest tests/test_transforms.py -v
-   ```
+### Run on Google Colab 
+You can open and execute the full notebook directly in Colab:
+ [![Open Notebook in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github//jorgefgin/madrid-weather-pyspark/blob/main/notebooks/madrid_weather_pyspark_pipeline.ipynb)
+
