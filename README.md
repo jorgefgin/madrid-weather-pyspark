@@ -39,6 +39,26 @@ Through statistical anomaly filtering on snowfall accumulation and sub-zero temp
 
 ---
 
+## Extreme Heat Analysis & Gold Layer Persistence
+Analysis of the daily temperature records identifies extreme summer heatwaves ($T_{\max} \ge 38.0\text{ °C}$):
+* **Frequency of Extreme Heat:** A total of **103 days** reached or exceeded $38.0\text{ °C}$ between 2015 and 2026.
+* **All-Time Maximum Temperature:** **41.5 °C** recorded on `2021-08-13` (with a daily thermal amplitude of **20.3 °C**), followed closely by **41.3 °C** on `2022-07-14` and **40.7 °C** on `2025-08-16`.
+* **Tropical Nights:** During the top 10 hottest days on record, minimum temperatures ($T_{\min}$) consistently remained above **20.8 °C**, peaking at **24.6 °C** on `2025-06-29`.
+
+#### Top 5 Hottest Days Recorded (Gold Layer Output)
+| Date | Min Temp (°C) | Max Temp (°C) | Thermal Range (°C) | Season |
+| :--- | :---: | :---: | :---: | :---: |
+| **2021-08-13** | 21.2 | **41.5** | 20.3 | Summer |
+| **2022-07-14** | 24.5 | **41.3** | 16.8 | Summer |
+| **2025-08-16** | 24.2 | **40.7** | 16.5 | Summer |
+| **2024-07-24** | 24.2 | **40.4** | 16.2 | Summer |
+| **2019-06-28** | 22.4 | **40.3** | 17.9 | Summer |
+
+---
+
+
+
+
 ## Predictive Modeling with Spark MLlib
 
 Distributed regression pipeline designed to forecast next-hour temperature ($t$):
