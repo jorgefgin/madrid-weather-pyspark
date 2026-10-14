@@ -1,6 +1,6 @@
 # Madrid Weather Lakehouse & Forecasting Pipeline (PySpark)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/madrid-weather-pyspark/blob/main/notebooks/madrid_weather_pipeline.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jorgefgin/madrid-weather-pyspark/blob/main/notebooks/madrid_weather_pipeline.ipynb)
 
 An end-to-end Big Data Engineering and Machine Learning pipeline built with **Apache Spark (PySpark)** following the **Medallion Architecture (Bronze ➔ Silver ➔ Gold)**. The project processes 103,128 hourly meteorological observations from Madrid, Spain (2015–2026), performs automated extreme weather anomaly detection, and trains a distributed ML model for temperature forecasting.
 
