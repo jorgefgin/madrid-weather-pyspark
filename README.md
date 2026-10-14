@@ -19,21 +19,6 @@ An end-to-end Big Data Engineering and Machine Learning pipeline built with **Ap
 
 ## Project Architecture (Medallion Pattern)
 
-```text
-[Raw CSV Data] 
-       │
-       ▼ (Metadata header stripping & strict StructType enforcement)
-[Bronze Layer]  ──► Stored as Partitioned Parquet (by year)
-       │
-       ▼ (Physical quality filters, normalization & temporal features)
-[Silver Layer]  ──► Stored as Partitioned Parquet (by year and month)
-       │
-       ▼ (Daily aggregations & Window Functions: 24h & 7d moving averages)
-[Gold Layer]    ──► Analytical tables & automated anomaly detection
-       │
-       ▼ (Lag features, VectorAssembler, StandardScaler)
-[MLlib Pipeline]──► Distributed Regression Model (LinearRegression)
-```
 
 1. **Bronze Layer (Ingestion):** Cleans initial metadata rows from the raw CSV, applies a strict schema (`StructType`) to avoid inference overhead, and converts the dataset to columnar **Apache Parquet** format partitioned by `year`.
 2. **Silver Layer (Quality & Feature Engineering):** Normalizes column names to `snake_case`, enforces physical boundary rules (filtering out-of-range humidity and temperature sensor anomalies), extracts calendar attributes (`month`, `day`, `hour`, `day_of_week`, `season`), and creates binary flags for rain and frost. Partitioned by `year` and `month`.
@@ -48,7 +33,7 @@ An end-to-end Big Data Engineering and Machine Learning pipeline built with **Ap
 
 Through statistical anomaly filtering on snowfall accumulation and sub-zero temperatures, the pipeline automatically isolates the most extreme winter event in the historical series (January 2021):
 * **Single-Day Snowfall Record:** **20.16 cm** accumulated on `2021-01-09` (with **12.25 cm** the previous day and a snow depth peak of **0.24 m**).
-* **All-Time Minimum Temperature:** **-11.1 °C** recorded on `2021-01-14` following the storm.
+
 
 ![Storm Filomena Impact](docs/img/filomena_impact.png)
 
